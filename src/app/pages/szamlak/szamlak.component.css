@@ -1,0 +1,23 @@
+#diktalas {
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.table-row-first {
+    background-color: lightsalmon;
+}
+
+.table-row-second {
+    background-color: lightblue;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}

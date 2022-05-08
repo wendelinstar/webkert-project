@@ -1,0 +1,26 @@
+<ng-content></ng-content>
+<div class="kapcsolat">
+    <h1>Kapcsolat</h1>
+    <div [(ngModel)]="complainInput">
+        <label for="subject">Tárgy: </label><br>
+        <input type="text" [(ngModel)]="complainObject['subject']" /><br>
+        <br>
+        <label for="message">Üzenet: </label><br>
+        <textarea [(ngModel)]="complainObject['message']" rows="20" cols="80"></textarea><br>
+        <br>
+        <button>Küldés</button>
+    </div>
+</div>
+
+<div>
+    <mat-card>
+        <!-- <mat-card-header>
+            <mat-card-title>Kapcsolat</mat-card-title>
+        </mat-card-header> -->
+        <mat-card-content>
+            <p><mat-icon>call</mat-icon> +36 30 123 45 67 </p>
+            <p><mat-icon>email</mat-icon> test@gmail.com </p>
+            <p><mat-icon>home</mat-icon> Szeged, Széchenyi tér 1. </p>
+        </mat-card-content>
+    </mat-card>
+</div>

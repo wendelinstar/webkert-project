@@ -1,0 +1,18 @@
+<span class="loading-indicator" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</span>
+
+<div class="login">
+    <h1>Vízóra</h1>
+    <!--<mat-form-field><label for="email">E-mail: </label><input MatInput type="email" [formControl]="email"/></mat-form-field>
+    <mat-form-field><label for="password">Jelszó: </label><input MatInput type="password" [formControl]="password"/></mat-form-field>-->
+    <mat-form-field><mat-label for="email">E-mail: </mat-label><input matInput type="email" [formControl]="email"/></mat-form-field>
+    <mat-form-field><mat-label for="password">Jelszó: </mat-label><input matInput type="password" [formControl]="password"/></mat-form-field>
+
+    <span>
+        <button mat-raised-button color="primary" (click)="login()">Bejelentkezés</button>
+        <button mat-raised-button color="primary" [routerLink]="'/regisztracio'">Regisztráció</button>
+    </span>
+    <!-- Async Pipe -->
+    <!-- <p>{{loadingObservation | async}}</p> -->
+</div>

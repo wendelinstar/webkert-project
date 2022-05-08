@@ -1,0 +1,43 @@
+<!-- <select #pageValue (change)="menuSwitch(pageValue.value)">
+    <option value="main">Main</option>
+    <option value="regisztracio">Regisztráció</option>
+    <option value="kapcsolat">Kapcsolat</option>
+    <option value="hirek">Hírek</option>
+    <option value="szamlak">Számlák</option>
+</select> -->
+
+<!-- <select [(ngModel)]="currentPage" (change)="menuSwitch()">
+    <option value="main">Main</option>
+    <option value="bejelentkezes">Bejelentkezés</option>
+    <option value="regisztracio">Regisztráció</option>
+    <option value="hirek">Hírek</option>
+    <option value="szamlak">Számlák</option>
+    <option value="kapcsolat">Kapcsolat</option>
+</select> -->
+
+<mat-nav-list>
+    <a mat-list-item routerLink="/bejelentkezes" (click)="close()" *ngIf="!loggedInUser">
+        <mat-icon>login</mat-icon>
+        <span>Bejelentkezés</span>
+    </a>
+    <a mat-list-item routerLink="/regisztracio" (click)="close()" *ngIf="!loggedInUser">
+        <mat-icon>app_registration</mat-icon>
+        <span>Regisztráció</span>
+    </a>
+    <a mat-list-item routerLink="/hirek" (click)="close()">
+        <mat-icon>newspaper</mat-icon>
+        <span>Hírek</span>
+    </a>
+    <a mat-list-item routerLink="/szamlak" (click)="close()">
+        <mat-icon>request_quote</mat-icon>
+        <span>Számlák</span>
+    </a>
+    <a mat-list-item routerLink="/kapcsolat" (click)="close()">
+        <mat-icon>info</mat-icon>
+        <span>Kapcsolat</span>
+    </a>
+    <a mat-list-item routerLink="/bejelentkezes" (click)="close()" *ngIf="loggedInUser">
+        <mat-icon>logout</mat-icon>
+        <span>Kijelentkezés</span>
+    </a>
+</mat-nav-list>

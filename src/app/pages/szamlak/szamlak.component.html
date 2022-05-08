@@ -1,0 +1,44 @@
+<div id="diktalas">
+    <h1>Diktálás</h1>
+    <br>
+    <!-- <form [formGroup]="szamlakForm"></form>
+    <div [(ngModel)]="szamlaInput">
+        <label for="vizora">Vízóra állás: </label>
+        <br><input type="number" [(ngModel)]="szamlaObject['vizora']"/> m3<br>
+        <br>
+    </div> 
+    // <mat-card-actions> -->
+        <form [formGroup]="szamlakForm" (ngSubmit)="diktal()">
+            <div>
+                <!-- <mat-form-field> -->
+                    <label for="vizora">Vízóra állás: </label>
+                    <input matInput type="number" formControlName="vizora" />
+                <!-- </mat-form-field>
+            </div>
+            <div>
+                <button mat-raised-button color="primary" type="submit">Diktálás</button>
+            -->
+            </div>
+        </form>
+   <!-- </mat-card-actions> -->
+    <button type="submit" (click)="diktal()">Diktálás</button> <!-- [routerLink]="'/szamlak/sikeres'" -->
+</div>
+<br><br><br>
+<div><h1>Számlák</h1></div>
+<div *ngIf="szamlak.length">
+    <table>
+        <tr>
+            <th>Sorszám</th>
+            <th>Vízóra állás</th>
+            <th>Ár</th>
+            <th>Dátum</th>
+        </tr>
+        <!-- <tr *ngFor="let szamla of szamlak; let i = index;" [ngClass]="i % 2 === 0 ? 'table-row-first' : 'table-row-second'"> -->
+            <tr *ngFor="let szamla of szamlak; let i = index;" [ngStyle]="{'background-color' : i % 2 === 0 ? 'lightsalmon' : 'lightblue'}">    
+            <td>{{szamla.sorszam}}</td>
+            <td>{{szamla.vizora}} m3</td>
+            <td>{{szamla.ar}} Ft</td>
+            <td>{{szamla.date.toString() | dateFormat}}</td>
+        </tr>
+    </table> 
+</div>

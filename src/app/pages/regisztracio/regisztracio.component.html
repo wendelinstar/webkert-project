@@ -1,0 +1,67 @@
+<!-- <div id="register">
+    <h1>Regisztráció</h1>
+    <br>
+    <div [(ngModel)]="registerinput matInput">
+        <label for="name">Teljes név: </label>
+        <br><input matInput type="text" [(ngModel)]="registerObject['name']"/><br>
+        <label for="email">E-mail cím: </label>
+        <br><input matInput type="email" [(ngModel)]="registerObject['email']"/><br>
+        <label for="password">Jelszó: </label>
+        <br><input matInput type="password" [(ngModel)]="registerObject['password']"/><br>
+        <label for="passwordAgain">Jelszó újra: </label>
+        <br><input matInput type="password" [(ngModel)]="registerObject['passwordAgain']"/><br>
+        <label for="bornDate">Születési dátum: </label>
+        <br><input matInput type="date" [(ngModel)]="registerObject['bornDate']"/><br>
+        <label for="szerzodesszam">Szerződésszám: </label>
+        <br><input matInput type="number" [(ngModel)]="registerObject['szerzodesszam']"/><br> 
+        <label for="sex">Neme: </label>
+        <br><input matInput type="radio"/>Férfi<input matInput type="radio"/>Nő<br>
+    </div>
+    <br>
+    <button>Regisztráció</button>
+</div>
+-->
+
+<div class="main_component">
+        <h1>Regisztráció</h1>
+        <form [formGroup]="regisztracioForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <mat-label for="email">E-mail cím: </mat-label>
+                <input matInput type="email" formControlName="email" />
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="password">Jelszó: </mat-label>
+                <input matInput type="password" formControlName="password"/>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="rePassword">Jelszó újra: </mat-label>
+                <input matInput type="password" formControlName="rePassword"/>
+            </mat-form-field>
+            <div formGroupName="name" class="subForm">
+                <mat-form-field>
+                    <mat-label for="vezeteknev">Vezetéknév: </mat-label>
+                    <input matInput type="text" formControlName="vezeteknev"/>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label for="keresztnev">Keresztnév: </mat-label>
+                    <input matInput type="text" formControlName="keresztnev"/>
+                </mat-form-field>
+            </div>
+            <mat-form-field>
+                <mat-label for="bornDate">Születési dátum: </mat-label>
+                <input matInput type="date" formControlName="bornDate"/>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label for="szerzodesszam">Szerződésszám: </mat-label>
+                <input matInput type="number"formControlName="szerzodesszam" />
+            </mat-form-field>
+            <div>
+                <span class="buttons">
+                    <button mat-raised-button color="primary" type="submit">Regisztrál</button>
+                </span>
+                <span class="buttons">
+                    <button mat-raised-button color="primary" (click)="goBack()">Vissza</button>
+                </span>
+            </div>
+        </form>
+</div>

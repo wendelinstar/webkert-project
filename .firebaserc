@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webfejl-keretrend-project": {
+      "hosting": {
+        "vizora": [
+          "webfejl-keretrend-project"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webfejl-keretrend-project"
+  }
+}

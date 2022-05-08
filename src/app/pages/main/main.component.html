@@ -1,0 +1,11 @@
+<div id="bejelentkez">
+    <h1>Bejelentkezés</h1>
+    <br>
+    <div [(ngModel)]="loginInput">
+        <label for="email">E-mail cím: </label>
+        <br><input type="email" [(ngModel)]="loginObject['email']"/><br>
+        <label for="password">Jelszó: </label>
+        <br><input type="password" [(ngModel)]="loginObject['password']"><br><br>
+    </div>
+    <input type="button" value="Bejelentkezés">
+</div>

@@ -1,0 +1,36 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, a:active {
+    color: darkblue;
+}
+
+.navigation-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+mat-sidenav {
+    width: 250px;
+}
+
+.loading-indicator {
+    position: fixed;
+    z-index: 999;
+    height: lem;
+    width: lem;
+    overflow: show;
+    margin: auto;
+}
+
+.loading-indicator::before {
+    content: '';
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: (0,0,0, 0.3);
+}
